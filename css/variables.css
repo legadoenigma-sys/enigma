@@ -1,0 +1,347 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 20/05/2026, 3:16:07 p. m.
+    Author     : Gabyn
+*/
+
+/* ============================================
+   ENIGMA — Variables & Base
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+:root {
+  /* Colors */
+  --gold:         #C9892A;
+  --gold-light:   #E8A84C;
+  --gold-bright:  #F5C060;
+  --gold-dark:    #8B5E14;
+  --gold-glow:    rgba(201, 137, 42, 0.35);
+  --black:        #000000;
+  --dark:         #080808;
+  --dark2:        #0F0F0F;
+  --dark3:        #161616;
+  --dark4:        #1C1C1C;
+  --white:        #FFFFFF;
+  --cream:        #F5EDD8;
+  --cream-dim:    rgba(245, 237, 216, 0.7);
+  --cream-muted:  rgba(245, 237, 216, 0.4);
+
+  /* Typography — exacta al logo */
+  --font-title:   'Playfair Display', 'Times New Roman', serif; /* ENIGMA — serif bold condensed */
+  --font-script:  'Great Vibes', cursive;                        /* El legado del abuelo — script */
+  --font-body:    'Cormorant Garamond', Georgia, serif;          /* Cuerpo elegante */
+
+  /* Spacing */
+  --section-pad:  120px 80px;
+  --section-pad-md: 80px 40px;
+  --section-pad-sm: 60px 24px;
+
+  /* Transitions */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.7, 0, 0.84, 0);
+  --dur-fast:   0.2s;
+  --dur-med:    0.4s;
+  --dur-slow:   0.8s;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+
+/* Título principal — como "ENIGMA" en el logo */
+.t-enigma {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Script — como "El legado del abuelo" en el logo */
+.t-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  color: var(--gold-light);
+}
+
+/* Cuerpo serif refinado */
+.t-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* Label pequeño en caps */
+.t-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.section-pad {
+  padding: var(--section-pad);
+}
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+              transform var(--dur-slow) var(--ease-out);
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Delay helpers */
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+.d4 { transition-delay: 0.4s; }
+
+/* ============================================
+   SECTION HEADER COMPONENT
+   ============================================ */
+.section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.section-title span {
+  color: var(--gold);
+}
+
+.section-script {
+  font-family: var(--font-script);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: var(--gold-light);
+  display: block;
+  margin-top: 6px;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 22px;
+}
+.section-divider-line {
+  flex: 0 0 60px;
+  height: 1px;
+}
+.section-divider-line:first-child {
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+.section-divider-line:last-child {
+  background: linear-gradient(270deg, transparent, var(--gold));
+}
+.section-divider-diamond {
+  width: 7px;
+  height: 7px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  padding: 16px 50px;
+  cursor: none;
+  transition: all var(--dur-med) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--black);
+}
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: left 0.5s;
+}
+.btn-gold:hover::before { left: 100%; }
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px var(--gold-glow);
+  background: var(--gold-light);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+.btn-outline:hover {
+  background: rgba(201,137,42,0.1);
+  transform: translateY(-3px);
+  border-color: var(--gold-light);
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(37,211,102,0.3);
+  background: #20c25d;
+}
+
+/* ============================================
+   NOISE TEXTURE OVERLAY
+   ============================================ */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+@media (max-width: 1100px) {
+  .container { padding: 0 40px; }
+  :root { --section-pad: var(--section-pad-md); }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  :root { --section-pad: var(--section-pad-sm); }
+  body { cursor: auto; }
+}
+
+.product-btn {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.product-card * {
+  pointer-events: auto;
+}

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ENIGMA — Licores artesanales inspirados en emociones. El legado del abuelo. Guaduas, Cundinamarca.">
+  <title>ENIGMA — El Legado del Abuelo</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+
+
+<body>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ========================================
+       NAVEGACIÓN
+  ======================================== -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="images/logo.jpg" alt="ENIGMA Logo" class="nav-logo-img"
+           onerror="this.style.display='none'; document.getElementById('nav-logo-fallback').style.display='flex'">
+      <span id="nav-logo-fallback" style="display:none; flex-direction:column">
+        <span class="nav-logo-text">ENIGMA</span>
+        <span class="nav-logo-sub">El legado del abuelo</span>
+      </span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#origin">Origen</a></li>
+      <li><a href="#collections">Colección</a></li>
+      <li><a href="#prices">Precios</a></li>
+      <li><a href="#why">¿Por Qué?</a></li>
+      <li><a href="#contact" class="nav-cta">Pedidos</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menú móvil overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-logo">
+      <img src="images/logo.jpg" alt="ENIGMA" onerror="this.style.display='none'">
+    </div>
+    <a href="#origin">Origen</a>
+    <a href="#collections">Colección</a>
+    <a href="#prices">Precios</a>
+    <a href="#why">¿Por Qué?</a>
+    <a href="#contact">Pedidos</a>
+  </div>
+
+  <!-- ========================================
+       HERO
+  ======================================== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="hero-particles"></div>
+
+    <!-- Ornamentos laterales -->
+    <svg class="hero-ornament hero-ornament-left" viewBox="0 0 100 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="50" y1="0" x2="50" y2="400" stroke="#C9892A" stroke-width="0.6"/>
+      <path d="M50 0 C50 0 10 80 10 200 C10 320 50 400 50 400" stroke="#C9892A" stroke-width="0.6" fill="none"/>
+      <path d="M50 0 C50 0 90 80 90 200 C90 320 50 400 50 400" stroke="#C9892A" stroke-width="0.6" fill="none"/>
+      <circle cx="50" cy="0"   r="4" fill="#C9892A"/>
+      <circle cx="50" cy="400" r="4" fill="#C9892A"/>
+      <circle cx="50" cy="200" r="7" stroke="#C9892A" stroke-width="0.6" fill="none"/>
+      <circle cx="50" cy="200" r="2" fill="#C9892A"/>
+    </svg>
+    <svg class="hero-ornament hero-ornament-right" viewBox="0 0 100 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="50" y1="0" x2="50" y2="400" stroke="#C9892A" stroke-width="0.6"/>
+      <path d="M50 0 C50 0 10 80 10 200 C10 320 50 400 50 400" stroke="#C9892A" stroke-width="0.6" fill="none"/>
+      <path d="M50 0 C50 0 90 80 90 200 C90 320 50 400 50 400" stroke="#C9892A" stroke-width="0.6" fill="none"/>
+      <circle cx="50" cy="0"   r="4" fill="#C9892A"/>
+      <circle cx="50" cy="400" r="4" fill="#C9892A"/>
+      <circle cx="50" cy="200" r="7" stroke="#C9892A" stroke-width="0.6" fill="none"/>
+      <circle cx="50" cy="200" r="2" fill="#C9892A"/>
+    </svg>
+
+    <div class="hero-content">
+      <!-- Logo grande en hero -->
+      <img src="images/logo.jpg" alt="ENIGMA — El Legado del Abuelo" class="hero-logo-img"
+           onerror="this.style.display='none'">
+
+      <!-- Fallback tipográfico si no carga imagen -->
+      <span class="hero-eyebrow">Licores Artesanales · Guaduas, Cundinamarca</span>
+      <h1 class="hero-title">ENIGMA</h1>
+      <span class="hero-script">El legado del abuelo</span>
+      <div class="hero-line"></div>
+      <p class="hero-desc">
+        Porque algunas historias no se cuentan... se degustan.<br>
+        Ingredientes naturales, elaboración artesanal,<br>momentos inolvidables.
+      </p>
+      <div class="hero-btns">
+        <a href="#collections" class="btn btn-gold">Descubrir Colección</a>
+        <a href="https://wa.me/573205775112?text=Hola!%20Me%20interesan%20los%20licores%20ENIGMA%20🥃"
+           target="_blank" class="btn btn-outline">Hacer Pedido</a>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <span>Descubrir</span>
+      <div class="scroll-cue-line"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ORIGEN
+  ======================================== -->
+  <section id="origin">
+    <div class="origin-grid">
+
+      <!-- Texto -->
+      <div class="origin-text reveal-left">
+        <span class="t-label">El Comienzo</span>
+        <h2 class="origin-title">El Origen de</h2>
+        <span class="origin-script">ENIGMA</span>
+        <p>ENIGMA nace de un legado familiar. Hace años, un abuelo comenzó a experimentar con frutas, hierbas y café, buscando capturar en cada botella los aromas y sabores que acompañaban los momentos más especiales de la vida.</p>
+        <p>Sus recetas, creadas con paciencia y dedicación, se convirtieron en pequeños tesoros compartidos entre familia y amigos.</p>
+        <p>Hoy ese legado continúa. Cada licor ENIGMA conserva la esencia de esas primeras creaciones: ingredientes naturales, elaboración artesanal y el deseo de transformar un simple momento en una experiencia memorable.</p>
+        <blockquote class="origin-quote">
+          "Porque algunas historias no se cuentan... se degustan."
+        </blockquote>
+      </div>
+
+      <!-- Visual -->
+      <div class="origin-visual reveal-right">
+        <div class="origin-ring">
+          <img src="images/logo.jpg" alt="ENIGMA" class="origin-logo-center"
+               onerror="this.replaceWith(Object.assign(document.createElement('span'),{style:'font-size:6rem;opacity:0.2',textContent:'🥃'}))">
+        </div>
+        <div class="origin-stats">
+          <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-lbl">Colecciones</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">10+</span>
+            <span class="stat-lbl">Sabores</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-lbl">Artesanal</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       COLECCIONES
+  ======================================== -->
+  <section id="collections">
+    <div class="collections-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Nuestros Licores</span>
+        <h2 class="section-title">La <span>Colección</span></h2>
+        <div class="section-divider">
+          <div class="section-divider-line"></div>
+          <div class="section-divider-diamond"></div>
+          <div class="section-divider-line"></div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <nav class="tab-nav reveal">
+        <button class="tab-btn active" data-tab="frutal">🍍 Frutal</button>
+        <button class="tab-btn" data-tab="botanica">🌿 Botánica</button>
+        <button class="tab-btn" data-tab="gourmet">☕ Gourmet</button>
+      </nav>
+
+      <!-- ── COLECCIÓN FRUTAL ── -->
+      <div class="tab-panel active" id="panel-frutal">
+
+        <div class="product-card reveal">
+          <div class="product-img-area">
+            <!-- 👇 REEMPLAZA esta ruta con tu imagen real -->
+            <img src="images/ilusión-piña.png" alt="Ilusión Piña"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">🍍</div>
+            <div class="product-glow"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Frutal</span>
+            <h3 class="product-name">ILUSIÓN</h3>
+            <span class="product-flavor">Piña</span>
+            <p class="product-desc">Licor tropical que captura la frescura y dulzura natural de la piña madura. Perfecto para cócteles refrescantes.</p>
+            <div class="product-notes">
+              <span class="note-tag">Tropical</span>
+              <span class="note-tag">Fresco</span>
+              <span class="note-tag">Dulce</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Ilusión — Piña')">Pedir Ahora</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal d1">
+          <div class="product-img-area">
+            <img src="images/euforia-banano.png" alt="Euforia Banano"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">🍌</div>
+            <div class="product-glow"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Frutal</span>
+            <h3 class="product-name">EUFORIA</h3>
+            <span class="product-flavor">Banano</span>
+            <p class="product-desc">Suave y cremoso, con la dulzura característica del banano maduro. Ideal para mezclas dulces y cócteles tropicales.</p>
+            <div class="product-notes">
+              <span class="note-tag">Dulce</span>
+              <span class="note-tag">Cremoso</span>
+              <span class="note-tag">Tropical</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Euforia — Banano')">Pedir Ahora</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal d2">
+          <div class="product-img-area">
+            <img src="images/pasion-maracuya.png" alt="Pasión Maracuyá"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">🌟</div>
+            <div class="product-glow"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Frutal</span>
+            <h3 class="product-name">PASIÓN</h3>
+            <span class="product-flavor">Maracuyá</span>
+            <p class="product-desc">Un equilibrio vibrante entre acidez y frescura tropical que despierta los sentidos.</p>
+            <div class="product-notes">
+              <span class="note-tag">Ácido</span>
+              <span class="note-tag">Cítrico</span>
+              <span class="note-tag">Refrescante</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Pasión — Maracuyá')">Pedir Ahora</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal d3">
+          <div class="product-img-area">
+            <img src="images/dulzura-mora.png" alt="Dulzura Mora Azul"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">🫐</div>
+            <div class="product-glow" style="background:rgba(80,40,140,0.25)"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Frutal</span>
+            <h3 class="product-name">DULZURA</h3>
+            <span class="product-flavor">Mora Azul Silvestre</span>
+            <p class="product-desc">Intenso sabor frutal con un balance perfecto entre dulzura y acidez. Vibrante y profundo.</p>
+            <div class="product-notes">
+              <span class="note-tag">Frutal</span>
+              <span class="note-tag">Dulce</span>
+              <span class="note-tag">Vibrante</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Dulzura — Mora Azul Silvestre')">Pedir Ahora</button>
+          </div>
+        </div>
+
+      </div><!-- /panel-frutal -->
+
+      <!-- ── COLECCIÓN BOTÁNICA ── -->
+      <div class="tab-panel" id="panel-botanica">
+
+        <div class="product-card reveal">
+          <div class="product-img-area">
+            <img src="images/amor-petalos.png" alt="Amor Pétalos"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">🌸</div>
+            <div class="product-glow" style="background:rgba(180,60,80,0.18)"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Botánica</span>
+            <h3 class="product-name">AMOR</h3>
+            <span class="product-flavor">Pétalos</span>
+            <p class="product-desc">Un licor delicado con notas florales suaves que evocan elegancia y romanticismo.</p>
+            <div class="product-notes">
+              <span class="note-tag">Floral</span>
+              <span class="note-tag">Aromático</span>
+              <span class="note-tag">Delicado</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Amor — Pétalos')">Pedir Ahora</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal d1">
+          <div class="product-img-area">
+            <img src="images/serenidad-yerbabuena.png" alt="Serenidad Yerbabuena"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">🌿</div>
+            <div class="product-glow" style="background:rgba(40,120,60,0.2)"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Botánica</span>
+            <h3 class="product-name">SERENIDAD</h3>
+            <span class="product-flavor">Yerbabuena</span>
+            <p class="product-desc">Refrescante y herbal, perfecto para cócteles ligeros o bebidas con soda.</p>
+            <div class="product-notes">
+              <span class="note-tag">Herbal</span>
+              <span class="note-tag">Fresco</span>
+              <span class="note-tag">Ligero</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Serenidad — Yerbabuena')">Pedir Ahora</button>
+          </div>
+        </div>
+
+      </div><!-- /panel-botanica -->
+
+      <!-- ── COLECCIÓN GOURMET ── -->
+      <div class="tab-panel" id="panel-gourmet">
+
+        <div class="product-card reveal">
+          <div class="product-img-area">
+            <img src="images/capricho-cacao.png" alt="Capricho Cacao"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">🍫</div>
+            <div class="product-glow" style="background:rgba(100,50,10,0.25)"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Gourmet</span>
+            <h3 class="product-name">CAPRICHO</h3>
+            <span class="product-flavor">Cacao</span>
+            <p class="product-desc">Profundo y seductor, con notas de chocolate que invitan a disfrutar cada sorbo.</p>
+            <div class="product-notes">
+              <span class="note-tag">Chocolate</span>
+              <span class="note-tag">Dulce</span>
+              <span class="note-tag">Elegante</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Capricho — Cacao')">Pedir Ahora</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal d1">
+          <div class="product-img-area">
+            <img src="images/suave-cafe.png" alt="Suave Café"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">☕</div>
+            <div class="product-glow" style="background:rgba(80,50,20,0.22)"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Gourmet</span>
+            <h3 class="product-name">SUAVE</h3>
+            <span class="product-flavor">Café Suave</span>
+            <p class="product-desc">Un licor equilibrado con el aroma delicado del café colombiano.</p>
+            <div class="product-notes">
+              <span class="note-tag">Aromático</span>
+              <span class="note-tag">Suave</span>
+              <span class="note-tag">Tostado</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Suave — Café Suave')">Pedir Ahora</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal d2">
+          <div class="product-img-area">
+            <img src="images/intenso-cafe.png" alt="Intenso Café Fuerte"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">🫘</div>
+            <div class="product-glow" style="background:rgba(60,30,10,0.28)"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Gourmet</span>
+            <h3 class="product-name">INTENSO</h3>
+            <span class="product-flavor">Café Fuerte</span>
+            <p class="product-desc">Rico y robusto, con el carácter profundo del café tostado. Persistente e inconfundible.</p>
+            <div class="product-notes">
+              <span class="note-tag">Tostado</span>
+              <span class="note-tag">Profundo</span>
+              <span class="note-tag">Persistente</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Intenso — Café Fuerte')">Pedir Ahora</button>
+          </div>
+        </div>
+
+        <div class="product-card reveal d3">
+          <div class="product-img-area">
+            <img src="images/armonia-cafe.png" alt="Armonía Café Tostado"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="product-emoji" style="display:none">🎁</div>
+            <div class="product-glow" style="background:rgba(80,50,15,0.2)"></div>
+          </div>
+          <div class="product-info">
+            <span class="product-collection">Colección Gourmet</span>
+            <h3 class="product-name">ARMONÍA</h3>
+            <span class="product-flavor">Café Tostado Artesanal</span>
+            <p class="product-desc">Café artesanal ENIGMA. Notas de panela, chocolate y un toque cítrico. Libra molida: $35.000</p>
+            <div class="product-notes">
+              <span class="note-tag">Panela</span>
+              <span class="note-tag">Chocolate</span>
+              <span class="note-tag">Cítrico</span>
+            </div>
+            <div class="intensity-row">
+              <span class="intensity-lbl">Intensidad</span>
+              <div class="dots">
+                <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+              </div>
+            </div>
+            <button class="product-btn" onclick="orderProduct('Armonía — Café Tostado (Libra $35.000)')">Pedir Ahora</button>
+          </div>
+        </div>
+
+      </div><!-- /panel-gourmet -->
+
+    </div><!-- /collections-inner -->
+  </section>
+
+  <!-- ========================================
+       PRECIOS
+  ======================================== -->
+  <section id="prices">
+    <div class="prices-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Presentaciones</span>
+        <h2 class="section-title">Precios &amp; <span>Formatos</span></h2>
+        <div class="section-divider">
+          <div class="section-divider-line"></div>
+          <div class="section-divider-diamond"></div>
+          <div class="section-divider-line"></div>
+        </div>
+      </div>
+
+      <div class="prices-grid">
+        <div class="price-card reveal-left">
+          <p class="price-card-title">Botella Recuperada</p>
+          <span class="price-card-sub">Sostenible &amp; Artesanal</span>
+          <ul class="price-list">
+            <li class="price-row"><span>210 ml</span><span class="price-amount">$25.000</span></li>
+            <li class="price-row"><span>375 ml</span><span class="price-amount">$35.000</span></li>
+            <li class="price-row"><span>750 ml</span><span class="price-amount">$65.000</span></li>
+          </ul>
+          <p class="price-note">Reacondicionadas con rigurosos procesos de lavado y sanitización. Compromiso con el medio ambiente ♻️</p>
+        </div>
+
+        <div class="price-card featured reveal-right">
+          <span class="price-badge">Premium</span>
+          <p class="price-card-title">Nueva Edición ENIGMA</p>
+          <span class="price-card-sub">Exclusiva &amp; Elegante</span>
+          <ul class="price-list">
+            <li class="price-row"><span>210 ml</span><span class="price-amount">$30.000</span></li>
+            <li class="price-row"><span>375 ml</span><span class="price-amount">$40.000</span></li>
+            <li class="price-row"><span>750 ml</span><span class="price-amount">$70.000</span></li>
+          </ul>
+          <p class="price-note">Diseñada especialmente para nuestros licores con presentación más elegante y exclusiva.</p>
+        </div>
+      </div>
+
+      <div class="cafe-card reveal">
+        <p class="price-card-title">☕ Café Artesanal ENIGMA</p>
+        <span class="price-card-sub">Armonía — Café Tostado</span>
+        <ul class="price-list">
+          <li class="price-row"><span>Libra de café molido</span><span class="price-amount">$35.000</span></li>
+        </ul>
+        <p class="price-note">Notas de panela, chocolate y toque cítrico. El mejor café de Cundinamarca.</p>
+      </div>
+
+      <div style="text-align:center; margin-top:50px" class="reveal">
+        <a href="https://wa.me/573205775112?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20licores%20ENIGMA%20🥃"
+           target="_blank" class="btn btn-gold">Hacer Pedido por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ¿POR QUÉ ENIGMA?
+  ======================================== -->
+  <section id="why">
+    <div class="why-inner">
+      <div class="section-header reveal">
+        <span class="section-label">Nuestra Esencia</span>
+        <h2 class="section-title">¿Por qué <span>ENIGMA</span>?</h2>
+        <div class="section-divider">
+          <div class="section-divider-line"></div>
+          <div class="section-divider-diamond"></div>
+          <div class="section-divider-line"></div>
+        </div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <span class="why-icon">🌿</span>
+          <h3 class="why-title">Ingredientes Naturales</h3>
+          <p class="why-text">Seleccionados con cuidado para garantizar autenticidad y sabor genuino en cada botella.</p>
+        </div>
+        <div class="why-card reveal d1">
+          <span class="why-icon">✋</span>
+          <h3 class="why-title">Elaboración Artesanal</h3>
+          <p class="why-text">Cada licor es creado a mano siguiendo las recetas originales del legado familiar.</p>
+        </div>
+        <div class="why-card reveal d2">
+          <span class="why-icon">💫</span>
+          <h3 class="why-title">Inspirados en Emociones</h3>
+          <p class="why-text">Sabores que cuentan historias y evocan los momentos más especiales de la vida.</p>
+        </div>
+        <div class="why-card reveal d3">
+          <span class="why-icon">♻️</span>
+          <h3 class="why-title">Compromiso Verde</h3>
+          <p class="why-text">Botellas recuperadas y reacondicionadas como parte de nuestro compromiso con el planeta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       CONTACTO
+  ======================================== -->
+  <section id="contact">
+    <div class="contact-inner reveal">
+      <div class="section-header">
+        <span class="section-label">Pedidos &amp; Distribución</span>
+        <h2 class="section-title">Con<span>táctanos</span></h2>
+        <div class="section-divider">
+          <div class="section-divider-line"></div>
+          <div class="section-divider-diamond"></div>
+          <div class="section-divider-line"></div>
+        </div>
+      </div>
+      <p class="contact-desc">
+        Realizamos envíos a todo el país. Para pedidos especiales, regalos corporativos o más información sobre nuestra colección, escríbenos directamente.
+      </p>
+      <div class="contact-btns">
+        <a href="https://wa.me/573205775112?text=Hola!%20Me%20interesan%20los%20licores%20ENIGMA%20🥃"
+           target="_blank" class="btn btn-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.856L0 24l6.318-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.012-1.374l-.36-.214-3.731.891.924-3.62-.235-.372A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+          </svg>
+          WhatsApp: 320 577 5112
+        </a>
+      </div>
+      <div class="contact-info-row">
+        <div class="info-block">
+          <span class="info-lbl">Ubicación</span>
+          <span class="info-val">Guaduas, Cundinamarca</span>
+        </div>
+        <div class="info-block">
+          <span class="info-lbl">Teléfono</span>
+          <span class="info-val">320 577 5112</span>
+        </div>
+        <div class="info-block">
+          <span class="info-lbl">Envíos</span>
+          <span class="info-val">Todo el país 🇨🇴</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social strip -->
+  <div class="social-strip">
+    <span class="social-lbl">Síguenos</span>
+    <a href="https://www.instagram.com/" target="_blank" class="social-link" title="Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/" target="_blank" class="social-link" title="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a href="https://wa.me/573205775112" target="_blank" class="social-link" title="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.856L0 24l6.318-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.012-1.374l-.36-.214-3.731.891.924-3.62-.235-.372A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <img src="images/logo.jpg" alt="ENIGMA" class="footer-logo-img"
+         onerror="this.style.display='none'">
+    <span class="footer-script">El legado del abuelo</span>
+    <p class="footer-copy">© 2025 ENIGMA · Guaduas, Cundinamarca · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- ========================================
+       CHATBOT
+  ======================================== -->
+  <div id="chat-fab">
+    <div class="chat-window" id="chat-window">
+      <div class="chat-header">
+        <div class="chat-avatar">
+          <img src="images/logo.jpg" alt="ENIGMA"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <span class="chat-avatar-fallback" style="display:none">🥃</span>
+        </div>
+        <div class="chat-header-text">
+          <h4>ENIGMA</h4>
+          <p>Asistente virtual</p>
+          <div class="chat-online">
+            <div class="online-dot"></div>
+            <span>En línea · Responde rápido</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <div class="msg bot">
+          <div class="msg-bubble">¡Bienvenido a ENIGMA! 🥃<br>Soy tu guía en el mundo de los licores artesanales. ¿En qué puedo ayudarte?</div>
+        </div>
+      </div>
+
+      <div class="chat-opts" id="chat-opts">
+        <!-- Las opciones se generan dinámicamente desde chatbot.js -->
+      </div>
+
+      <a href="https://wa.me/573205775112?text=Hola!%20Quiero%20conocer%20más%20sobre%20los%20licores%20ENIGMA%20🥃"
+         target="_blank" class="chat-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.856L0 24l6.318-1.508A11.933 11.933 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.012-1.374l-.36-.214-3.731.891.924-3.62-.235-.372A9.791 9.791 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+        Hablar por WhatsApp
+      </a>
+
+      <div class="chat-input-row">
+        <input class="chat-input" id="chat-input" type="text" placeholder="Escribe tu pregunta...">
+        <button class="chat-send" id="chat-send">➤</button>
+      </div>
+    </div>
+
+    <button class="chat-toggle-btn" id="chat-toggle-btn" aria-label="Abrir chat">🥃</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+
+</body>
+</html>
